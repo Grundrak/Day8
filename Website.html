@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="web.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+
+    <title>Do</title>
+</head>
+<body>
+        <nav> 
+            <i class="fa-solid fa-bars" ></i>
+            <i class="fa-regular fa-user" ></i>
+            <i  class="fa-sharp fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-location-dot"></i>
+        </nav>
+        <div class="recherche">
+            <button> <i class="fa-solid fa-magnifying-glass" style="color: #19191a; width: 25px;height: 25px;"></i></button>
+            <input  type="text" style="width: 400px; height: 25px; padding: 5px;" placeholder="Resturant Name" required>
+        </div>
+        <div class="Hero-section">
+            <img class="background-1" src="_Spices.jpg" alt="Delivery">
+            <h1 class="special-title">Delivery food</h1>
+        </div>
+    <main>
+
+
+        <div class="main-grid">
+        <div class="espace"> 
+            <div class="carte-1"> 
+                <img class="burger" src="https://i.pinimg.com/564x/e5/6c/7e/e56c7e393100191ba9958d734cd0d0f2.jpg" alt="Burger">
+                <h2> Menu Burger</h2>
+                <p>Incontournable. Fondez pour sa sauce au goût unique, ses deux viandes de bœuf grillées à la flamme et son fromage fondant … Un chef d'œuvre !</p>
+                <p class="price">Min Order £15.00</p>
+            </div>
+            <div class="carte-2"> 
+                <img class="burger" src="https://i.pinimg.com/564x/00/ea/e3/00eae3f9d0e2764f4230cfe1365db78c.jpg" alt="chiken">
+                <h2> Garlic Chiken</h2>
+                <p>Indulge in the savory delight of our Garlic Chicken, where tender chicken is artfully infused with aromatic garlic, creating a flavorful symphony that will leave you craving more.</p>
+                <p class="price">Min Order £25.00</p>
+            </div> 
+            <div class="carte-3"> 
+                <img class="burger" src="https://i.pinimg.com/564x/bd/ca/5d/bdca5d22aea2db9fa274c3513f320683.jpg" alt="Brochette">
+                <h2> Turkey skewers</h2>
+                <p>Savor the succulence of our Turkey Skewers, expertly grilled to perfection and seasoned with a blend of exquisite spices, delivering a tantalizing taste that embodies culinary excellence.</p>
+                <p class="price">Min Order £20.00</p>
+            </div> 
+            <div class="carte-4"> 
+                <img class="burger" src="https://i.pinimg.com/564x/6d/ba/91/6dba91c1fdb5d4939c7e9d65420cbd4c.jpg" alt="Pan-Seared Steak with Garlic Butter
+                ">
+                <h2> Garlic Chiken</h2>
+                <p>
+                    Savor the rich flavors of a perfectly pan-seared steak. This dish offers a delectable marriage of tender beef and indulgent buttery notes, creating a memorable culinary experience.</p>
+                <p class="price">Min Order £45.00</p>
+            </div> 
+        </div>
+         <div class="c1">  </div>
+         <div class="c2">  </div>
+         <div class="c3">   <img src="groceries.svg" alt="Groceries">
+         </div>
+         <div class="c4">    <img src="delivery.svg" alt="Delivery">
+         </div>
+         <div class="c5"> 
+            <img style="height: 150px;width: 200px;" src="https://i.pinimg.com/564x/a5/46/15/a546154e3cef9763742c87152b188e4f.jpg" alt="Burger king">  
+           <div class="menu-1">
+               <h3 class="title-1">Burger king</h3>
+               <p class="text-1">Experience the iconic flavors of Burger King, where flame-grilled perfection meets mouthwatering ingredients, delivering a taste sensation that's truly unforgettable.</p>
+            </div>
+        </div>
+         <div class="c6"> 
+            <img style="height: 150px;width: 200px;" src="https://i.pinimg.com/564x/a1/c4/04/a1c404bea49c0143058bc4dd9da79d33.jpg" alt="Pizza Fresh and tasty">  
+            <div class="menu-2">
+                <h3 class="title-2">Pizza Fresh and tasty</h3>
+                <p class="text-2">Indulge in our freshly baked pizzas, a symphony of flavors crafted with the finest ingredients that guarantee a delightful and satisfying culinary experience.</p>
+             </div>
+         </div>
+         <div class="c7"> 
+            <img style="height: 150px;width: 200px;" src="https://i.pinimg.com/564x/7c/41/cf/7c41cf02f5f829b9ea488ce207b5a1ef.jpg" alt="Burger king">  
+            <div class="menu-3">
+                <h3 class="title-1">Fast Food Clipart</h3>
+                <p class="text-1">Explore our collection of fast food clipart, capturing the essence of delectable flavors and tempting indulgence, adding a touch of tastiness to your visual projects.</p>
+             </div>
+         </div>
+         <div class="c8"> 
+            <h1 class="maps-title">Our localisation</h1>
+            <div id="map"></div>
+          
+            <script>
+              // Initialize and display the map
+              function initMap() {
+                var myLatLng = { lat: 40.712776, lng: -74.005974 }; // Replace with your desired coordinates
+          
+                var map = new google.maps.Map(document.getElementById('map'), {
+                  center: myLatLng,
+                  zoom: 14 // Adjust the zoom level
+                });
+          
+                var marker = new google.maps.Marker({
+                  position: myLatLng,
+                  map: map,
+                  title: 'Marker Title' // Replace with your marker title
+                });
+              }
+            </script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB165sNTtaGmo2S2WQ4fxCgZmFEgSSR98M" async defer></script>
+         </div>
+        </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-column">
+              <h3>Contact Us</h3>
+              <p>Delivery Food</p>
+              <p>Casablanca, Morocco</p>
+              <p>Email: Greedo@Arkx.com</p>
+              <p>Phone: (212) 615248620</p>
+            </div>
+            <div class="footer-column">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Order Online</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3>Follow Us</h3>
+              <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+          <p class="copyright">&copy; 2023 Food Delivery. All rights reserved.</p>
+        </div>
+      </footer>
+</body>
+</html>
